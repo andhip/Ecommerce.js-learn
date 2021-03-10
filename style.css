@@ -54,6 +54,7 @@ body {
   border: 2px solid rgb(103, 156, 255);
   width: 5%;
   margin-top: 10px;
+  margin: 0 auto;
 }
 
 .cards-prod {
@@ -63,6 +64,9 @@ body {
   margin-top: 2rem;
 }
 
+hr {
+  margin-bottom: 3rem;
+}
 #footer {
   position: relative;
   bottom: 0 !important;
