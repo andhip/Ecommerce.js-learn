@@ -37,6 +37,7 @@ body {
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
   font-weight: 600;
+  font-size: 16px;
 }
 .btn-outline-primary {
   color: #fff;
@@ -72,6 +73,7 @@ h3 {
   font-weight: 600;
 }
 
-hr {
-  margin-bottom: 3rem;
+#myCart {
+  margin-top: 4rem;
+  margin-bottom: 9px;
 }
