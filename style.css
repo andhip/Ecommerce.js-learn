@@ -1,15 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
 body {
-  color: #fff;
+  height: 100%;
+  position: relative;
+  color: rgb(0, 0, 0);
 }
 
+.navbar {
+  box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.171);
+}
 .navbar .navbar-brand {
   color: white;
 }
 
 .navbar-toggler {
+  border: solid 1px #fff;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.466);
+}
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
   color: #fff;
 }
-
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
+}
+.btn-outline-primary {
+  color: #fff;
+  border: solid 1px #fff;
+}
+.btn-outline-primary:hover {
+  background-color: #fff;
+  border: solid 1px #fff;
+  color: #000000;
+}
+
+.carousel {
+  margin-top: 0.25rem;
+}
+.carousel-inner img {
+  height: 40%;
+  width: 100%;
+}
+.head-line-title {
+  border: 2px solid rgb(103, 156, 255);
+  width: 5%;
+  margin-top: 10px;
+}
+
+.cards-prod {
+  margin-top: 5rem;
+}
+.card {
+  margin-top: 2rem;
+}
+
+#footer {
+  position: relative;
+  bottom: 0 !important;
+  width: 100%;
+  height: 50px;
+  margin-top: 9vw;
+}
+#footer .cr {
+  line-height: 45px;
+  align-items: center;
+  justify-content: center;
 }
