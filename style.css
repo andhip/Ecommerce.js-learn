@@ -58,6 +58,7 @@ body {
 }
 .head-line-title {
   border: 2px solid rgb(103, 156, 255);
+  border-radius: 50px;
   width: 5%;
   margin-top: 10px;
   margin: 0 auto;

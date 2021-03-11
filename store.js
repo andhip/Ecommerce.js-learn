@@ -25,3 +25,9 @@ function addToCartClicked(evenet){
     updateCartTotal()
 
 }
+
+function addItemTocart(title, price, imageSrc){
+    var cartRow = document.createElement('div')
+    cartRow.classList.add('cart-row')
+    var cartItems  = document.getElementsByClassName('cart-items')
+}
