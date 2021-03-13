@@ -80,19 +80,22 @@ function addItemTocart(title, price, imageSrc){
 
 }
 
+
 function updateCartTotal() {
 
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows          = cartItemContainer.getElementsByClassName('cart-row')
     var total = 0
-    for (var i = 0; i < cartRows.length; i++){
+  
+    for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var qtyElement   = cartRow.getElementsByClassName('cart-qty-input')[0]
-        var price = parseFloat(priceElement.innerText.replace('Rp', ''))
-        var qty   = qtyElement.value
-        total     = total + (price * qty)
+        var price        = parseFloat(priceElement.innerText.replace('Rp', ''))
+        var qty          = qtyElement.value
+        total  = total + (price * qty)
     }
-    total   = Math.round(total * 100) / 100
+
+    total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = 'Rp' + total
 }
