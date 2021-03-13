@@ -25,6 +25,20 @@ function ready() {
     }
 }
 
+// make methode event when button onclick then do something:
+function addToCartClicked(event){
+    var button   = event.target
+    var shopItem = button.parentElement.parentElement
+    var title    = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+    var price    = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    //Add item to cart by var type
+    addItemTocart(title, price, imageSrc)
+    updateCartTotal()
+
+}
+
+
 function removeCartItem(event){
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
@@ -34,22 +48,9 @@ function removeCartItem(event){
 function qtyChanged(event){
     var input   = event.target
     if(isNaN(input.value) || input.value <=0){
-        input.value =1
+        input.value = 1
     }
     updateCartTotal()
-}
-
-// make methode event when button onclick then do something:
-function addToCartClicked(event){
-    var button   = event.target
-    var shopItem = button.parentElement.parentElement
-    var title    = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-    var price    = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-    //Add item to cart by type
-    addItemTocart(title, price, imageSrc)
-    updateCartTotal()
-
 }
 
 function addItemTocart(title, price, imageSrc){
@@ -59,12 +60,12 @@ function addItemTocart(title, price, imageSrc){
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for(var i=0; 1 < cartItemNames.length; i++){
         if(cartItemNames[i].innerText == title){
-            alert('the product has already been added to the cart')
+            alert('Product has already been added to the cart')
             return
         }
     }
     var cartRowContents = `<div class="cart-item cart-column">
-                                <img class="cart-item-image" src="${imageSrc}" widht="100" height="100">
+                                <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
                                 <span class="cart-item-title">${title}</span>
                             </div>
                                  <span class="cart-price cart-column">${price}</span>
