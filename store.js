@@ -23,6 +23,17 @@ function ready() {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
+
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+}
+
+function purchaseClicked() {
+    alert ('Thanks your order has been Saved!')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    while(cartItems.hasChildNodes()){
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    updateCartTotal()
 }
 
 // make methode event when button onclick then do something:
@@ -79,7 +90,6 @@ function addItemTocart(title, price, imageSrc){
                             cartRow.getElementsByClassName('cart-qty-input')[0].addEventListener('change', qtyChanged)
 
 }
-
 
 function updateCartTotal() {
 
