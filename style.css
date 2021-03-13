@@ -73,7 +73,9 @@ body {
 h3 {
   font-weight: 600;
 }
-
+.mc {
+  margin-bottom: 8vw;
+}
 #myCart {
   margin-top: 3.5rem;
   margin-bottom: 9px;
